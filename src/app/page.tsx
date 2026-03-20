@@ -75,12 +75,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Bottom branding */}
-        <div className="absolute bottom-6 text-center">
-          <p className="text-xs text-purple-300/40 tracking-widest uppercase">
-            Powered by Axion Labs
-          </p>
-        </div>
       </div>
 
       {/* Decorative grid lines */}

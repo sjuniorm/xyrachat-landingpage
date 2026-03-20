@@ -9,7 +9,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-const TARGET_DATE = new Date("2025-06-01T00:00:00Z");
+const TARGET_DATE = new Date("2026-06-01T00:00:00Z");
 
 function calcTimeLeft(): TimeLeft {
   const diff = TARGET_DATE.getTime() - Date.now();
