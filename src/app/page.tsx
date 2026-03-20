@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { Particles } from "@/components/Particles";
-import { CountdownTimer } from "@/components/CountdownTimer";
-import { EmailForm } from "@/components/EmailForm";
 
 export default function Home() {
   return (
@@ -50,30 +48,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Countdown Timer */}
-        <div className="animate-fade-in-up-delay-3 mb-12">
-          <CountdownTimer />
-        </div>
-
-        {/* Email signup */}
-        <div className="animate-fade-in-up-delay-4 w-full max-w-md">
-          <EmailForm />
-        </div>
-
-        {/* Platform link */}
-        <div className="animate-fade-in-up-delay-4 mt-8 text-center">
-          <p className="text-sm text-purple-300/60">
-            Already have access?{" "}
-            <a
-              href="https://www.xyra.chat/auth"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-pink-300/80 hover:text-pink-300 underline underline-offset-4 transition-colors duration-300"
-            >
-              Sign in to the platform
-            </a>
-          </p>
-        </div>
 
       </div>
 
