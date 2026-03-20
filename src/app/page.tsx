@@ -43,8 +43,9 @@ export default function Home() {
         <div className="animate-fade-in-up-delay-2 text-center mb-10 max-w-2xl">
           <p className="text-lg sm:text-xl md:text-2xl text-purple-100/80 font-light leading-relaxed">
             The next-generation chat automation platform.
-            <br className="hidden sm:block" />
-            <span className="text-pink-300/90 font-medium">Automate. Engage. Scale.</span>
+          </p>
+          <p className="mt-3 text-lg sm:text-xl md:text-2xl text-pink-300/90 font-semibold tracking-wide">
+            Automate. Engage. Scale.
           </p>
         </div>
 
