@@ -38,9 +38,13 @@ export function EmailForm() {
     }
   }
 
+  const cardClasses =
+    "rounded-[20px] border border-purple-400/25 bg-white/[0.06] backdrop-blur-md " +
+    "shadow-[0_0_40px_rgba(216,130,255,0.25),0_0_80px_rgba(216,130,255,0.10),inset_0_1px_0_rgba(255,255,255,0.08)]";
+
   if (status === "success") {
     return (
-      <div className="px-6 py-8 rounded-2xl bg-white/5 border border-purple-400/20 backdrop-blur-sm glow-box text-center">
+      <div className={`${cardClasses} px-6 py-8 text-center`}>
         <div className="text-4xl mb-3 drop-shadow-[0_0_20px_rgba(216,130,255,0.6)]">
           ✨
         </div>
@@ -58,9 +62,9 @@ export function EmailForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="px-5 py-5 sm:px-6 sm:py-6 rounded-2xl bg-white/5 border border-purple-400/20 backdrop-blur-sm glow-box"
+      className={`${cardClasses} px-6 py-6 sm:px-7 sm:py-7`}
     >
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col sm:flex-row gap-2.5">
         <input
           type="email"
           required
@@ -69,12 +73,12 @@ export function EmailForm() {
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading"}
           aria-label="Email address"
-          className="flex-1 min-w-0 px-5 py-3.5 rounded-xl bg-white/5 border border-purple-400/20 backdrop-blur-sm text-white placeholder-purple-300/40 outline-none focus:border-pink-400/60 focus:ring-2 focus:ring-pink-400/25 transition-all duration-300 text-sm disabled:opacity-60"
+          className="flex-1 min-w-0 h-[52px] px-5 rounded-xl bg-white/5 border border-purple-400/20 backdrop-blur-sm text-white placeholder-purple-300/40 outline-none focus:border-pink-400/60 focus:ring-2 focus:ring-pink-400/25 transition-all duration-300 text-[15px] disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 transition-all duration-300 glow-box glow-box-hover cursor-pointer whitespace-nowrap disabled:opacity-60 disabled:cursor-wait"
+          className="group inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 transition-all duration-300 glow-box glow-box-hover cursor-pointer whitespace-nowrap disabled:opacity-60 disabled:cursor-wait"
         >
           {status === "loading" ? (
             "Sending…"
@@ -121,7 +125,7 @@ export function EmailForm() {
             />
           </svg>
         </span>
-        Send me build updates — no spam, unsubscribe anytime.
+        Send me occasional build updates — no spam, one-click unsubscribe.
       </label>
 
       {error && (

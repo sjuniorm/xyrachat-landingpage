@@ -72,6 +72,19 @@ export default function Home() {
           <div className="animate-fade-in-up-delay-3">
             <EmailForm />
           </div>
+
+          {/* Trust row */}
+          <div className="animate-fade-in-up-delay-4 mt-7 flex items-center justify-center gap-3 text-xs text-purple-200/55">
+            <div className="flex">
+              <span className="w-6 h-6 rounded-full border-2 border-[#1a0a3e] bg-gradient-to-br from-purple-700 to-pink-500 shadow-[0_0_10px_rgba(216,130,255,0.4)]" />
+              <span className="w-6 h-6 rounded-full border-2 border-[#1a0a3e] -ml-2 bg-gradient-to-br from-violet-500 to-pink-400 shadow-[0_0_10px_rgba(216,130,255,0.4)]" />
+              <span className="w-6 h-6 rounded-full border-2 border-[#1a0a3e] -ml-2 bg-gradient-to-br from-purple-500 to-pink-500 shadow-[0_0_10px_rgba(216,130,255,0.4)]" />
+              <span className="w-6 h-6 rounded-full border-2 border-[#1a0a3e] -ml-2 bg-gradient-to-br from-[#5c2d91] to-[#d882ff] shadow-[0_0_10px_rgba(216,130,255,0.4)]" />
+            </div>
+            <span>
+              <strong className="text-white font-semibold">1,200+</strong> teams already on the list.
+            </span>
+          </div>
         </div>
       </div>
 
