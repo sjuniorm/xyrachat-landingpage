@@ -271,7 +271,7 @@ export default function Home() {
               />
             </div>
             <span>
-              <strong style={{ color: "#fff", fontWeight: 600 }}>1,200+</strong>{" "}
+              <strong style={{ color: "#fff", fontWeight: 600 }}>120+</strong>{" "}
               teams already on the list.
             </span>
           </div>
