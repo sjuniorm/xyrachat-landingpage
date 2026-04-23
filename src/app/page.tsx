@@ -157,25 +157,27 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1
-            className="animate-fade-in-up-delay-2 animate-shimmer"
-            style={{
-              fontFamily: "inherit",
-              fontSize: "clamp(36px, 6vw, 58px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
-              margin: "0 0 16px",
-              background:
-                "linear-gradient(90deg, #ffffff 0%, #e9d5ff 50%, #f9a8d4 100%)",
-              backgroundSize: "200% auto",
-              WebkitBackgroundClip: "text",
-              backgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Join the waitlist.
-          </h1>
+          <div className="animate-fade-in-up-delay-2">
+            <h1
+              className="animate-shimmer"
+              style={{
+                fontFamily: "inherit",
+                fontSize: "clamp(36px, 6vw, 58px)",
+                fontWeight: 700,
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+                margin: "0 0 16px",
+                background:
+                  "linear-gradient(90deg, #ffffff 0%, #e9d5ff 50%, #f9a8d4 100%)",
+                backgroundSize: "200% auto",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Join the waitlist.
+            </h1>
+          </div>
 
           {/* Lede */}
           <p
