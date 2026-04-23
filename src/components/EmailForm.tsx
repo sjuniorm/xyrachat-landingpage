@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 
 export function EmailForm() {
   const [email, setEmail] = useState("");
+  const [wantsUpdates, setWantsUpdates] = useState(true);
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
   const [error, setError] = useState<string | null>(null);
   const [alreadySubscribed, setAlreadySubscribed] = useState(false);
@@ -39,36 +40,26 @@ export function EmailForm() {
 
   if (status === "success") {
     return (
-      <div className="text-center px-6 py-8 rounded-2xl bg-white/5 border border-purple-400/20 backdrop-blur-sm glow-box">
-        <div className="text-4xl mb-3 drop-shadow-[0_0_20px_rgba(216,130,255,0.6)]">✨</div>
+      <div className="px-6 py-8 rounded-2xl bg-white/5 border border-purple-400/20 backdrop-blur-sm glow-box text-center">
+        <div className="text-4xl mb-3 drop-shadow-[0_0_20px_rgba(216,130,255,0.6)]">
+          ✨
+        </div>
         <p className="text-white font-semibold text-lg tracking-tight">
           {alreadySubscribed ? "You're already on the list." : "You're on the list."}
         </p>
         <p className="text-purple-200/70 text-sm mt-2 leading-relaxed">
-          {alreadySubscribed
-            ? "We'll notify you the moment Xyra Chat launches."
-            : "We'll ping you the moment Xyra Chat launches — no spam."}
+          We&apos;ll ping you the moment Xyra Chat launches — no spam.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full" noValidate>
-      <div className="flex justify-center mb-5">
-        <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] font-semibold text-pink-300/90 px-3.5 py-1.5 rounded-full border border-pink-400/35 bg-pink-400/10">
-          <span
-            className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse-glow"
-            style={{ boxShadow: "0 0 10px rgba(244,114,182,0.8)" }}
-          />
-          Early Access
-        </span>
-      </div>
-
-      <p className="text-center text-sm text-purple-200/70 mb-4">
-        Be first in line. We&apos;ll notify you at launch.
-      </p>
-
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      className="px-5 py-5 sm:px-6 sm:py-6 rounded-2xl bg-white/5 border border-purple-400/20 backdrop-blur-sm glow-box"
+    >
       <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
@@ -107,12 +98,34 @@ export function EmailForm() {
         </button>
       </div>
 
-      {error ? (
+      <label className="flex items-center justify-center gap-2.5 mt-4 text-xs text-purple-200/60 cursor-pointer select-none">
+        <input
+          type="checkbox"
+          className="sr-only peer"
+          checked={wantsUpdates}
+          onChange={(e) => setWantsUpdates(e.target.checked)}
+        />
+        <span className="w-4 h-4 rounded-[5px] border border-purple-400/40 bg-white/5 inline-grid place-items-center transition-all duration-200 peer-checked:bg-gradient-to-br peer-checked:from-purple-700 peer-checked:to-pink-500 peer-checked:border-transparent peer-checked:shadow-[0_0_10px_rgba(216,130,255,0.5)]">
+          <svg
+            viewBox="0 0 10 10"
+            fill="none"
+            className={`w-2.5 h-2.5 ${wantsUpdates ? "opacity-100" : "opacity-0"} transition-opacity`}
+            aria-hidden
+          >
+            <path
+              d="M2 5.5 L4 7.5 L8 2.5"
+              stroke="#fff"
+              strokeWidth={1.8}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
+        Send me build updates — no spam, unsubscribe anytime.
+      </label>
+
+      {error && (
         <p className="mt-3 text-center text-sm text-pink-300/90">{error}</p>
-      ) : (
-        <p className="mt-3 text-center text-xs text-purple-200/50">
-          No spam. Unsubscribe anytime.
-        </p>
       )}
     </form>
   );
