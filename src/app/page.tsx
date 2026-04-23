@@ -60,7 +60,7 @@ export default function Home() {
 
           {/* Lede + triple cadence */}
           <div className="animate-fade-in-up-delay-2 mb-10">
-            <p className="text-center text-base sm:text-lg text-purple-100/80 leading-relaxed mx-auto max-w-[32rem]">
+            <p className="text-center text-base sm:text-lg text-purple-100/80 leading-relaxed mx-auto max-w-[28rem]">
               The next-generation chat automation platform. Be first in line when we launch.
             </p>
             <p className="mt-3 text-center text-sm sm:text-base text-pink-300/90 font-semibold tracking-[0.12em]">

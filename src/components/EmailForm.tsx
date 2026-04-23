@@ -64,7 +64,7 @@ export function EmailForm() {
       noValidate
       className={`${cardClasses} px-6 py-6 sm:px-7 sm:py-7`}
     >
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col sm:flex-row gap-2.5">
         <input
           type="email"
           required
@@ -73,12 +73,13 @@ export function EmailForm() {
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading"}
           aria-label="Email address"
-          className="w-full h-[52px] px-5 rounded-xl bg-white/5 border border-purple-400/20 backdrop-blur-sm text-white placeholder-purple-300/40 outline-none focus:border-pink-400/60 focus:ring-2 focus:ring-pink-400/25 transition-all duration-300 text-[15px] disabled:opacity-60"
+          className="flex-1 min-w-0 h-[52px] px-5 rounded-xl bg-white/5 border border-purple-400/20 backdrop-blur-sm text-white placeholder-purple-300/40 outline-none focus:border-pink-400/60 focus:ring-2 focus:ring-pink-400/25 transition-all duration-300 text-[15px] disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="group inline-flex items-center justify-center gap-2 w-full h-[52px] px-7 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 transition-all duration-300 glow-box glow-box-hover cursor-pointer whitespace-nowrap disabled:opacity-60 disabled:cursor-wait"
+          className="group inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 transition-all duration-300 cursor-pointer whitespace-nowrap disabled:opacity-60 disabled:cursor-wait"
+          style={{ boxShadow: "0 0 20px rgba(216,130,255,0.35)" }}
         >
           {status === "loading" ? (
             "Sending…"
