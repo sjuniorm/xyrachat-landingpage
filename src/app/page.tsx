@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Particles } from "@/components/Particles";
+import { EmailForm } from "@/components/EmailForm";
 
 export default function Home() {
   return (
@@ -49,7 +50,10 @@ export default function Home() {
           </p>
         </div>
 
-
+        {/* Newsletter signup */}
+        <div className="animate-fade-in-up-delay-2 w-full max-w-md">
+          <EmailForm />
+        </div>
       </div>
 
       {/* Decorative grid lines */}
