@@ -23,7 +23,7 @@ export default function Home() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 py-16">
-        <div className="w-full max-w-xl text-center">
+        <div className="w-full max-w-md text-center">
           {/* Logo */}
           <div className="animate-fade-in-up flex justify-center mb-7">
             <div className="animate-float">
